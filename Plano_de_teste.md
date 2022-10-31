@@ -80,7 +80,7 @@ Os potenciais riscos na hora do teste são:
 ---
 
 ## Como os resultados do teste será divulgado	
-Será gerado um documento HTML utilizando o newman a partir da linha de comando. O próprio postman nos gera um relatório dos testes. Caso algum defeito seja encontrado, ele será documentado.
+Será gerado um documento HTML utilizando o newman a partir da linha de comando. O próprio postman nos gera um relatório dos testes. Caso algum defeito seja encontrado, ele será documentado. Devo adiantar que o newman não está funcionando como deveria, muitos testes acabam falhando, sendo que dentro do postman passam sem problemas. 
 
 ---
 

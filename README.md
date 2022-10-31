@@ -30,7 +30,7 @@ RESULTADO ESPERADO ➡️ **Login realizado com sucesso**
 ---
 
 ## CT2
-CENÁRIO	➡️ Login com e-mail ou senha inválidos
+CENÁRIO	➡️ Login com e-mail e/ou senha inválidos
 
 AÇÕES/PROCEDIMENTOS	➡️
 1.	Abrir uma requisição do tipo POST
@@ -78,6 +78,87 @@ RESULTADO ESPERADO ➡️ **Este e-mail já está sendo usado**
 ---
 
 ## CT5
+CENÁRIO	➡️ Buscar usuários
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo GET
+2.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Lista de usuários**
+
+---
+
+## CT6
+CENÁRIO	➡️ Buscar usuário por ID
+
+PRÉ-CONDIÇÕES ➡️ Usuário estar cadastrado
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo GET
+2.  Informar o ID do usuário
+3.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Usuário encontrado**
+
+---
+
+## CT7
+CENÁRIO	➡️ Buscar usuário por ID inexistente
+
+PRÉ-CONDIÇÕES ➡️ Usuário não estar cadastrado
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo GET
+2.  Informar o ID do usuário
+3.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Usuário não encontrado**
+
+---
+
+## CT8
+CENÁRIO	➡️ Excluir usuário
+
+PRÉ-CONDIÇÕES ➡️ Usuário estar cadastrado
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo DELETE
+2.  Informar o ID do usuário
+3.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Registro excluído com sucesso**
+
+---
+
+## CT9
+CENÁRIO	➡️ Excluir usuário sem registro
+
+PRÉ-CONDIÇÕES ➡️ Usuário não estar cadastrado ou já ter sido excluído
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo DELETE
+2.  Informar o ID do usuário
+3.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Nenhum registro excluído**
+
+---
+
+## CT10
+CENÁRIO	➡️ Excluir usuário com carrinho
+
+PRÉ-CONDIÇÕES ➡️ Usuário possuir um carrinho cadastrado
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo DELETE
+2.  Informar o ID do usuário
+3.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Não é permitido excluir usuário com carrinho cadastrado**
+
+---
+
+## CT11
 CENÁRIO	➡️ Editar usuário
 
 PRÉ-CONDIÇÕES ➡️ Usuário estar cadastrado
@@ -94,7 +175,7 @@ RESULTADO ESPERADO ➡️ **Registro alterado com sucesso**
 
 ---
 
-## CT6
+## CT12
 CENÁRIO	➡️ Cadastrar usuário caso o ID não exista
 
 PRÉ-CONDIÇÕES ➡️ ID inexistente
@@ -111,8 +192,8 @@ RESULTADO ESPERADO ➡️ **Cadastro realizado com sucesso**
 
 ---
 
-## CT7
-CENÁRIO	➡️ Editar usuário com email indisponível
+## CT13
+CENÁRIO	➡️ Alterar email do usuário para email indisponível
 
 PRÉ-CONDIÇÕES ➡️ E-mail já estar cadastrado
 
@@ -130,7 +211,7 @@ RESULTADO ESPERADO ➡️ **Este e-mail já está sendo usado**
 
 ---
 
-## CT8
+## CT14
 CENÁRIO	➡️ Cadastrar produto
 
 PRÉ-CONDIÇÕES ➡️ Usuário ter autorização
@@ -148,7 +229,7 @@ RESULTADO ESPERADO ➡️ **Cadastro realizado com sucesso**
 
 ---
 
-## CT9
+## CT15
 CENÁRIO	➡️ Cadastrar produto com nome já utilizado
 
 PRÉ-CONDIÇÕES ➡️ Nome indisponível
@@ -166,7 +247,7 @@ RESULTADO ESPERADO ➡️ **Já existe produto com esse nome**
 
 ---
 
-## CT10
+## CT16
 CENÁRIO	➡️ Cadastrar produto sem autorização
 
 PRÉ-CONDIÇÕES ➡️ Usuário não habilitar autorização
@@ -182,22 +263,133 @@ AÇÕES/PROCEDIMENTOS	➡️
 RESULTADO ESPERADO ➡️ **Token de acesso ausente, inválido, expirado ou usuário do token não existe mais**
 
 ---
-## CT11
-CENÁRIO	➡️ Cadastrar produto com adm igual a false
+    ## CT17
+    CENÁRIO	➡️ Cadastrar produto com adm igual a false
+
+    AÇÕES/PROCEDIMENTOS	➡️
+    1.	Abrir uma requisição do tipo POST
+    2.	Informar o ID
+    3.  Ativar o body
+    4.	Informar o formato dos dados
+    5.  Inserir os dados
+    6.	Enviar a requisição
+
+    RESULTADO ESPERADO ➡️ **Rota exclusiva para administradores**
+
+---
+
+## CT18
+CENÁRIO	➡️ Buscar produtos
 
 AÇÕES/PROCEDIMENTOS	➡️
-1.	Abrir uma requisição do tipo POST
+1.	Abrir uma requisição do tipo GET
+2.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Lista de produtos**
+
+---
+
+## CT19
+CENÁRIO	➡️ Buscar produto pelo ID
+
+PRÉ-CONDIÇÕES ➡️ Produto estar cadastrado
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo GET
+2.  Informar o ID do produto
+3.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Produto encontrado**
+
+---
+
+## CT20
+CENÁRIO	➡️ Buscar produto pelo ID inexistente
+
+PRÉ-CONDIÇÕES ➡️ Produto não estar cadastrado
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo GET
+2.  Informar o ID do produto
+3.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Produto não encontrado**
+
+---
+
+## CT21
+CENÁRIO	➡️ Excluir produto
+
+PRÉ-CONDIÇÕES ➡️ Produto estar cadastrado
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo DELETE
+2.  Informar o ID do produto
+3.  Informar o token
+4.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Registro excluído com sucesso**
+
+---
+
+## CT22
+CENÁRIO	➡️ Excluir produto sem registro
+
+PRÉ-CONDIÇÕES ➡️ Produto não estar cadastrado
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo DELETE
+2.  Informar o ID do produto
+3.  Informar o token
+4.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Nenhum registro excluído**
+
+---
+
+## CT23
+CENÁRIO	➡️ Excluir produto que está em um carrinho
+
+PRÉ-CONDIÇÕES ➡️ Produto estar em um carrinho
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo DELETE
+2.  Informar o ID do produto
+3.  Informar o token
+4.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Não é permitido excluir produto que faz parte de carrinho**
+
+---
+
+## CT24
+CENÁRIO	➡️ Excluir produto sem token
+
+PRÉ-CONDIÇÕES ➡️ Não ativar token
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo DELETE
+2.  Informar o ID do produto
+3.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Token de acesso ausente, inválido, expirado ou usuário do token não existe mais**
+
+---
+
+## CT25
+CENÁRIO	➡️ Excluir produto com adm igual a false
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo DELETE
 2.	Informar o ID
-3.  Ativar o body
-4.	Informar o formato dos dados
-5.  Inserir os dados
-6.	Enviar a requisição
+3.  Informar o token
+4.	Enviar a requisição
 
 RESULTADO ESPERADO ➡️ **Rota exclusiva para administradores**
 
 ---
 
-## CT12
+## CT26
 CENÁRIO	➡️ Editar produto
 
 PRÉ-CONDIÇÕES ➡️ Produto estar cadastrado
@@ -215,7 +407,7 @@ RESULTADO ESPERADO ➡️ **Registro alterado com sucesso**
 
 ---
 
-## CT13
+## CT27
 CENÁRIO	➡️ Cadastrar produto caso o ID não exista
 
 PRÉ-CONDIÇÕES ➡️ ID inexistente
@@ -233,7 +425,7 @@ RESULTADO ESPERADO ➡️ **Cadastro realizado com sucesso**
 
 ---
 
-## CT14
+## CT28
 CENÁRIO	➡️ Editar produto com nome já utilizado
 
 PRÉ-CONDIÇÕES ➡️ Nome indisponível
@@ -251,7 +443,7 @@ RESULTADO ESPERADO ➡️ **Cadastro realizado com sucesso**
 
 ---
 
-## CT15
+## CT29
 CENÁRIO	➡️ Editar produto sem autorização
 
 PRÉ-CONDIÇÕES ➡️ Não informar o token
@@ -268,7 +460,7 @@ RESULTADO ESPERADO ➡️ **Token de acesso ausente, inválido, expirado ou usu�
 
 ---
 
-## CT16
+## CT30
 CENÁRIO	➡️ Editar produto com adm igual a false
 
 AÇÕES/PROCEDIMENTOS	➡️
@@ -283,7 +475,7 @@ RESULTADO ESPERADO ➡️ **Rota exclusiva para administradores**
 
 ---
 
-## CT17
+## CT31
 CENÁRIO	➡️ Cadastrar carrinho
 
 PRÉ-CONDIÇÕES ➡️ Produto estar cadastrado
@@ -300,7 +492,7 @@ RESULTADO ESPERADO ➡️ **Cadastro realizado com sucesso**
 
 ---
 
-## CT18
+## CT32
 CENÁRIO	➡️ Cadastrar carrinho com produto duplicado 
 
 AÇÕES/PROCEDIMENTOS	➡️
@@ -315,7 +507,7 @@ RESULTADO ESPERADO ➡️ **Não é permitido possuir produto duplicado**
 
 ---
 
-## CT19
+## CT33
 CENÁRIO	➡️ Cadastrar mais de um carrinho 
 
 PRÉ-CONDIÇÕES ➡️ Já existir um carrinho cadastrado
@@ -332,7 +524,7 @@ RESULTADO ESPERADO ➡️ **Não é permitido ter mais de 1 carrinho**
 
 ---
 
-## CT20
+## CT34
 CENÁRIO	➡️ Cadastrar carrinho com produto inexistente
 
 AÇÕES/PROCEDIMENTOS	➡️
@@ -347,7 +539,7 @@ RESULTADO ESPERADO ➡️ **Produto não encontrado**
 
 ---
 
-## CT21
+## CT35
 CENÁRIO	➡️ Cadastrar carrinho com produto com estoque insuficiente
 
 AÇÕES/PROCEDIMENTOS	➡️
@@ -362,7 +554,58 @@ RESULTADO ESPERADO ➡️ **Produto não possui quantidade suficiente**
 
 ---
 
-## CT22
+## CT36
+CENÁRIO	➡️ Cadastrar carrinho sem token
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo POST
+2.  Ativar o body
+3.	Informar o formato dos dados
+4.  Inserir produtos 
+5.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Token de acesso ausente, inválido, expirado ou usuário do token não existe mais**
+
+---
+
+## CT37
+CENÁRIO	➡️ Buscar carrinhos
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo GET
+2.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Lista de carrinhos**
+
+---
+
+## CT38
+CENÁRIO	➡️ Buscar carrinho por ID
+
+PRÉ-CONDIÇÕES ➡️ Existir um carrinho cadastrado
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo GET
+2.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Carrinho encontrado**
+
+---
+
+## CT39
+CENÁRIO	➡️ Buscar carrinhos por ID inexistente
+
+PRÉ-CONDIÇÕES ➡️ Não ter um carrinho cadastrado
+
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo GET
+2.	Enviar a requisição
+
+RESULTADO ESPERADO ➡️ **Carrinho não encontrado**
+
+---
+
+## CT40
 CENÁRIO	➡️ Finalizar compra
 
 PRÉ-CONDIÇÕES ➡️ Existir um carrinho cadastrado
@@ -377,7 +620,7 @@ RESULTADO ESPERADO ➡️ **Registro excluído com sucesso**
 
 ---
 
-## CT23
+## CT41
 CENÁRIO	➡️ Finalizar compra sem ter carrinho
 
 AÇÕES/PROCEDIMENTOS	➡️
@@ -390,7 +633,7 @@ RESULTADO ESPERADO ➡️ **Não foi encontrado carrinho para esse usuário**
 
 ---
 
-## CT24
+## CT42
 CENÁRIO	➡️ Finalizar compra sem token
 
 AÇÕES/PROCEDIMENTOS	➡️
@@ -402,7 +645,7 @@ RESULTADO ESPERADO ➡️ **Token de acesso ausente, inválido, expirado ou usu�
 
 ---
 
-## CT25
+## CT43
 CENÁRIO	➡️ Cancelar compra e devolver produtos ao estoque
 
 PRÉ-CONDIÇÕES ➡️ Existir um carrinho cadastrado
@@ -417,7 +660,7 @@ RESULTADO ESPERADO ➡️ **Registro excluído com sucesso. Estoque dos produtos
 
 ---
 
-## CT26
+## CT44
 CENÁRIO	➡️ Cancelar compra sem ter carrinho
 
 AÇÕES/PROCEDIMENTOS	➡️
@@ -430,7 +673,7 @@ RESULTADO ESPERADO ➡️ **Não foi encontrado carrinho para esse usuário**
 
 ---
 
-## CT27
+## CT45
 CENÁRIO	➡️ Cancelar compra sem token
 
 AÇÕES/PROCEDIMENTOS	➡️
