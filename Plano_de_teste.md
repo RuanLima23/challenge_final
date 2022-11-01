@@ -89,4 +89,9 @@ Esse projeto tem como data de início 18/10/2022 e tem como fim dia 31/10/2022.
 Tenho como objetivo concluir todas as atividades necessárias para a elaboração dos testes nesse período.
 
 
+---
+
+## Referências e agradecimentos
+Agradeço toda a equipe do programa de bolsas pela ajuda e esforço concentrado na realização, execução e tirada de dúvidas em relação ao projeto.
+
 
