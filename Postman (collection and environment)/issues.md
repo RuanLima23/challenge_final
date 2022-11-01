@@ -40,5 +40,7 @@ ponto de melhoria para o software.
 
 1. Status code 401 com um email não cadastrado ou uma senha incorreta, devendo retornar um 400.
 
+2. O status retornado com um json errado é de 500.
+
 
 ### **Lembrando que todos os testes foram realizados dentro dos limites da documentação da ServeRest, portanto, todos as issues reportatas são de retornos da API na qual a documentação não cobriu.**

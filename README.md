@@ -263,18 +263,18 @@ AÇÕES/PROCEDIMENTOS	➡️
 RESULTADO ESPERADO ➡️ **Token de acesso ausente, inválido, expirado ou usuário do token não existe mais**
 
 ---
-    ## CT17
-    CENÁRIO	➡️ Cadastrar produto com adm igual a false
+## CT17
+CENÁRIO	➡️ Cadastrar produto com adm igual a false
 
-    AÇÕES/PROCEDIMENTOS	➡️
-    1.	Abrir uma requisição do tipo POST
-    2.	Informar o ID
-    3.  Ativar o body
-    4.	Informar o formato dos dados
-    5.  Inserir os dados
-    6.	Enviar a requisição
+AÇÕES/PROCEDIMENTOS	➡️
+1.	Abrir uma requisição do tipo POST
+2.	Informar o ID
+3.  Ativar o body
+4.	Informar o formato dos dados
+5.  Inserir os dados
+6.	Enviar a requisição
 
-    RESULTADO ESPERADO ➡️ **Rota exclusiva para administradores**
+RESULTADO ESPERADO ➡️ **Rota exclusiva para administradores**
 
 ---
 
