@@ -439,7 +439,7 @@ AÇÕES/PROCEDIMENTOS	➡️
 6.  Inserir dados
 7.	Enviar a requisição
 
-RESULTADO ESPERADO ➡️ **Cadastro realizado com sucesso**
+RESULTADO ESPERADO ➡️ **Já existe produto com esse nome**
 
 ---
 
@@ -557,6 +557,8 @@ RESULTADO ESPERADO ➡️ **Produto não possui quantidade suficiente**
 ## CT36
 CENÁRIO	➡️ Cadastrar carrinho sem token
 
+PRÉ-CONDIÇÕES ➡️ Não informar o token
+
 AÇÕES/PROCEDIMENTOS	➡️
 1.	Abrir uma requisição do tipo POST
 2.  Ativar o body
@@ -636,6 +638,8 @@ RESULTADO ESPERADO ➡️ **Não foi encontrado carrinho para esse usuário**
 ## CT42
 CENÁRIO	➡️ Finalizar compra sem token
 
+PRÉ-CONDIÇÕES ➡️ Não informar o token
+
 AÇÕES/PROCEDIMENTOS	➡️
 1.	Abrir uma requisição do tipo DELETE
 2.  Informar qual o tipo de exclusão do carrinho (concluir/cancelar)
@@ -675,6 +679,8 @@ RESULTADO ESPERADO ➡️ **Não foi encontrado carrinho para esse usuário**
 
 ## CT45
 CENÁRIO	➡️ Cancelar compra sem token
+
+PRÉ-CONDIÇÕES ➡️ Não informar o token
 
 AÇÕES/PROCEDIMENTOS	➡️
 1.	Abrir uma requisição do tipo DELETE
